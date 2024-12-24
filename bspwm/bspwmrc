@@ -25,5 +25,5 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a Thunar state=floating
 
-feh --bg-scale ~/.config/bspwm/walpapper/wallhaven-3led2d.jpg &
+feh --bg-scale ~/.config/bspwm/wallpaper/wallhaven-3led2d.jpg &
 $HOME/.config/polybar/mybar/run.sh
