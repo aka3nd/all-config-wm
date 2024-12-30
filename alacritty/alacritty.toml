@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/dracula.toml", "~/.config/alacritty/font.toml"]
+general.import = ["~/.config/alacritty/dracula.toml", "~/.config/alacritty/font.toml"]
 
 [window.padding]
 x = 2
