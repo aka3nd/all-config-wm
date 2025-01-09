@@ -20,6 +20,23 @@ for app in "${aplikasi[@]}"; do
     fi
 done
 
+for app in "${aplikasi[@]}"; do
+    # Periksa apakah aplikasi ada dalam PATH menggunakan which
+    if which "$app" &> /dev/null; then
+        echo "$app sudah terinstal."
+    else
+        echo "$app belum terinstal. Menginstal..."
+        # Instal aplikasi menggunakan apt-get
+        sudo dnf install "$app" -y
+        if [ $? -eq 0 ]; then
+            echo "$app berhasil diinstal."
+        else
+            echo "Gagal menginstal $app. Pastikan Anda memiliki izin yang cukup atau cek koneksi internet Anda."
+        fi
+    fi
+done
+
+
 #!/bin/bash
 
 # Daftar path dari folder yang ingin Anda periksa
