@@ -1,0 +1,7 @@
+[[keyboard.bindings]]
+key = "PageUp"
+action = "ScrollPageUp"
+
+[[keyboard.bindings]]
+key = "PageDown"
+action = "ScrollPageDown"

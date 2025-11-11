@@ -1,4 +1,4 @@
-general.import = ["~/.config/alacritty/dracula.toml", "~/.config/alacritty/font.toml"]
+general.import = ["~/.config/alacritty/dracula.toml", "~/.config/alacritty/font.toml", "~/.config/alacritty/scrolling.toml"]
 
 [window.padding]
 x = 2
@@ -17,3 +17,7 @@ mods   = "Shift"
 [cursor]
 style = "beam"
 vi_mode_style = "beam"
+
+[scrolling]
+history = 10000
+multiplier = 3
