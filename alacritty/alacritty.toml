@@ -1,8 +1,8 @@
 general.import = ["~/.config/alacritty/dracula.toml", "~/.config/alacritty/font.toml", "~/.config/alacritty/scrolling.toml"]
 
 [window.padding]
-x = 2
-y = 2
+x = 10
+y = 5
 
 [[keyboard.bindings]]
 action = "ScrollPageUp"
