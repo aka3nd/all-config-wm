@@ -1,0 +1,12 @@
+#!/bin/sh
+JDTLS_HOME="$HOME/jdtls"
+LAUNCHER=$(ls "$JDTLS_HOME/plugins/org.eclipse.equinox.launcher_"*.jar | head -1)
+
+exec /usr/local/bin/java \
+  --add-modules=ALL-SYSTEM \
+  --add-opens java.base/java.util=ALL-UNNAMED \
+  --add-opens java.base/java.lang=ALL-UNNAMED \
+  -jar "$LAUNCHER" \
+  -configuration "$JDTLS_HOME/config_linux" \
+  -data "$HOME/.cache/jdtls_workspace" \
+  "$@"
