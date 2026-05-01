@@ -1,0 +1,55 @@
+// ~/.config/mango/waybar/config.jsonc
+{
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    //"modules-left": ["dwl/tags", "dwl/window"],
+    "modules-left": ["dwl/tags"],
+    "modules-center": ["custom/clock"],
+    "modules-right": ["battery", "tray", "custom/power"],
+
+    // Konfigurasi untuk menampilkan Workspace (di MangoWM disebut 'tags')
+    "dwl/tags": {
+        "num-tags": 9,           // Jumlah workspace
+        "hide-vacant": false,    // Tampilkan semua workspace (biar keliatan rapi)
+        "expand": true,          // Memenuhi ruang di bar
+        "disable-click": false
+    },
+
+    // Konfigurasi untuk menampilkan judul jendela yang sedang aktif
+    "dwl/window": {
+        "format": " {title}", // Tambahkan icon biar keren
+        "max-length": 60,
+        "rewrite": {
+            "Firefox": "󰈹 Firefox",
+            "foot": "󰣇 Terminal"
+        }
+    },
+
+    // System Tray untuk aplikasi latar belakang
+    "tray": {
+        "icon-size": 18,
+        "spacing": 8
+    },
+
+    // Modul Jam yang simpel dan rapi
+    "custom/clock": {
+        "exec": "date '+%H:%M  %d/%m'",   // Format: 14:30  15/04
+        "interval": 60,
+        "format": "{}"
+    },
+
+    // Modul Baterai (penting banget buat laptop)
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "interval": 30
+    },
+
+    // Tombol Power untuk shutdown/logout dengan Wlogout
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "wlogout"   // Pastikan wlogout sudah terinstall
+    }
+}

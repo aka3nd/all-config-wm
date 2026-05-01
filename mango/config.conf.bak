@@ -1,0 +1,164 @@
+# ==============================================
+# MANGO CONFIGURATION - FreeBSD (Fixed Version)
+# Berdasarkan format config bawaan MangoWM
+# ==============================================
+
+# ========================
+# AUTOSTART (Waybar)
+# ========================
+exec-once = waybar -c ~/.config/mango/waybar/config.jsonc -s ~/.config/mango/waybar/style.css
+
+# ========================
+# PENGGANTIAN LAYOUT PER TAG
+# ========================
+tagrule=id:1,layout_name:tile
+tagrule=id:2,layout_name:tile
+tagrule=id:3,layout_name:tile
+tagrule=id:4,layout_name:tile
+tagrule=id:5,layout_name:tile
+tagrule=id:6,layout_name:tile
+tagrule=id:7,layout_name:tile
+tagrule=id:8,layout_name:tile
+tagrule=id:9,layout_name:tile
+
+# ========================
+# RELOAD CONFIG
+# ========================
+bind=SUPER,r,reload_config
+
+# ========================
+# MENU DAN TERMINAL
+# ========================
+bind=SUPER,space,spawn,rofi -show drun
+bind=SUPER,Return,spawn,foot
+bind=SUPER,d,spawn,rofi -show run
+
+# ========================
+# EXIT DAN KILL
+# ========================
+bind=SUPER,Shift,e,quit
+bind=SUPER,q,killclient
+bind=SUPER,Shift,q,killclient
+
+# ========================
+# SWITCH WINDOW FOCUS (Navigasi)
+# ========================
+bind=SUPER,h,focusdir,left
+bind=SUPER,j,focusdir,down
+bind=SUPER,k,focusdir,up
+bind=SUPER,l,focusdir,right
+
+bind=SUPER,Left,focusdir,left
+bind=SUPER,Down,focusdir,down
+bind=SUPER,Up,focusdir,up
+bind=SUPER,Right,focusdir,right
+
+bind=SUPER,Tab,focusstack,next
+
+# ========================
+# SWAP WINDOW (Tukar posisi jendela)
+# ========================
+bind=SUPER+Shift,Up,exchange_client,up
+bind=SUPER+Shift,Down,exchange_client,down
+bind=SUPER+Shift,Left,exchange_client,left
+bind=SUPER+Shift,Right,exchange_client,right
+
+# ========================
+# SWITCH WINDOW STATUS
+# ========================
+bind=SUPER,f,togglefullscreen
+bind=SUPER,Shift,f,togglefakefullscreen
+bind=SUPER,v,togglefloating
+bind=SUPER,m,togglemaximizescreen
+bind=SUPER,o,toggleoverview
+bind=SUPER,g,toggleglobal
+bind=SUPER,z,toggle_scratchpad
+
+# ========================
+# MINIMIZE
+# ========================
+bind=SUPER,i,minimized
+bind=SUPER,Shift,i,restore_minimized
+
+# ========================
+# PINDAH TAG (View) - Menggunakan Ctrl (sesuai contoh bawaan)
+# ========================
+bind=SUPER,1,view,1,0
+bind=SUPER,2,view,2,0
+bind=SUPER,3,view,3,0
+bind=SUPER,4,view,4,0
+bind=SUPER,5,view,5,0
+bind=SUPER,6,view,6,0
+bind=SUPER,7,view,7,0
+bind=SUPER,8,view,8,0
+bind=SUPER,9,view,9,0
+
+# ========================
+# MEMINDAHKAN CLIENT KE TAG (Tag/Move) - Menggunakan Alt
+# ========================
+bind=Alt,1,tag,1,0
+bind=Alt,2,tag,2,0
+bind=Alt,3,tag,3,0
+bind=Alt,4,tag,4,0
+bind=Alt,5,tag,5,0
+bind=Alt,6,tag,6,0
+bind=Alt,7,tag,7,0
+bind=Alt,8,tag,8,0
+bind=Alt,9,tag,9,0
+
+# ========================
+# NAVIGASI TAG DENGAN PANAH (Opsional)
+# ========================
+bind=SUPER,Left,viewtoleft,0
+bind=SUPER,Right,viewtoright,0
+bind=SUPER+Shift,Left,tagtoleft,0
+bind=SUPER+Shift,Right,tagtoright,0
+
+# ========================
+# GAPS
+# ========================
+bind=SUPER+Shift,equal,incgaps,1
+bind=SUPER+Shift,minus,incgaps,-1
+bind=SUPER+Shift,r,togglegaps
+
+# ========================
+# SWITCH LAYOUT
+# ========================
+bind=SUPER,n,switch_layout
+
+# ========================
+# SCROLLER LAYOUT (opsional)
+# ========================
+bind=SUPER,e,set_proportion,1.0
+bind=SUPER,x,switch_proportion_preset
+
+# ========================
+# RESIZE DAN MOVE WINDOW (opsional)
+# ========================
+bind=Ctrl+Shift,Up,movewin,+0,-50
+bind=Ctrl+Shift,Down,movewin,+0,+50
+bind=Ctrl+Shift,Left,movewin,-50,+0
+bind=Ctrl+Shift,Right,movewin,+50,+0
+
+bind=Ctrl+Alt,Up,resizewin,+0,-50
+bind=Ctrl+Alt,Down,resizewin,+0,+50
+bind=Ctrl+Alt,Left,resizewin,-50,+0
+bind=Ctrl+Alt,Right,resizewin,+50,+0
+
+# ========================
+# MOUSE BINDINGS
+# ========================
+mousebind=SUPER,btn_left,moveresize,curmove
+mousebind=SUPER,btn_right,moveresize,curresize
+mousebind=NONE,btn_middle,togglemaximizescreen,0
+
+# ========================
+# AXIS BINDINGS (Scroll wheel)
+# ========================
+axisbind=SUPER,UP,viewtoleft_have_client
+axisbind=SUPER,DOWN,viewtoright_have_client
+
+# ========================
+# WALLPAPER
+# ========================
+exec-once = swaybg -i /home/aka/Downloads/wallhaven-oggerl.jpg

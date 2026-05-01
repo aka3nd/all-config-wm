@@ -1,0 +1,97 @@
+/* ~/.config/mango/waybar/style.css */
+* {
+    font-family: "JetBrainsMono Nerd Font", "Fira Code", monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(30, 30, 46, 0.85); /* Warna background transparan khas Catppuccin Mocha */
+    color: #cdd6f4;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+/* Modul di kiri, tengah, kanan (agar tidak terlalu rapat) */
+.modules-left, .modules-right {
+    margin: 0 5px;
+}
+
+#tags button {
+    padding: 0 6px;
+    color: #6c7086;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Tampilan workspace yang sedang aktif (Focused) */
+#tags button.focused {
+    color: #cdd6f4;
+    background-color: #5294e3;
+    box-shadow: inset 0 -3px #cdd6f4;
+}
+
+/* Tampilan workspace yang ada isinya (Occupied) */
+#tags button.occupied {
+    color: #89b4fa;
+}
+
+/* Hover effect */
+#tags button:hover {
+    background-color: #313244;
+    color: #ffffff;
+}
+
+/* Modul Window Title */
+#window {
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+/* Modul Clock */
+#custom-clock {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* Modul Battery */
+#battery {
+    margin-right: 8px;
+}
+
+/* Warna Battery berdasarkan kapasitas */
+#battery.critical:not(.charging) {
+    color: #f38ba8;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Tombol Power */
+#custom-power {
+    margin-right: 12px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Animasi blink untuk battery critical */
+@keyframes blink {
+    to {
+        background-color: #f38ba8;
+        color: #1e1e2e;
+    }
+}
+
+
+#custom-hwstat {
+    padding: 0 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #a6e3a1;
+}
+
+#custom-hwstat:hover {
+    background-color: rgba(166, 227, 161, 0.2);
+}
